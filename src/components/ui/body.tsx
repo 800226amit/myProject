@@ -10,7 +10,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, } from "@/components/ui/card"
 import { title } from 'process';
 
-import { List, SubHeading, myIframe, FeaturTechnology, LatestTechnology, devOps } from "./config/card.js";
+import { List, SubHeading, companylogo, myIframe, FeaturTechnology, LatestTechnology, devOps } from "./config/card.js";
 
 
 
@@ -136,7 +136,7 @@ export default function Body() {
                                                     <CardContent>
                                                         <h1 className='flex justify-center font-bold'>{item.Footer} </h1>
                                                     </CardContent>
-                                                    
+
                                                 </Card>
                                             </div>
 
@@ -147,8 +147,7 @@ export default function Body() {
                             );
                         })}
                     </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
+                    
                 </Carousel>
             </div>
             {/* End Third Section Feature Technology */}
@@ -167,7 +166,7 @@ export default function Body() {
                     )
                 })}
             </div>
-          
+
             <div className="flex justify-center">
                 <Carousel className="flex justify-center h-auto w-full   p-4" opts={{ align: 'center' }}>
                     <CarouselContent className='flex flex-col-4'>
@@ -190,28 +189,26 @@ export default function Body() {
                                                     <CardContent>
                                                         <h1 className='flex justify-center font-bold'>{item.Footer} </h1>
                                                     </CardContent>
-                                                    
+
                                                 </Card>
                                             </div>
 
                                         </div>
-
                                     </div>
                                 </CarouselItem>
                             );
                         })}
                     </CarouselContent>
-                    
                 </Carousel>
             </div>
 
-          
+
             {/* End Fourth Section Latest Technology */}
 
             {/* Start Fifth Section dev opes  */}
 
 
-            <div className='flex flex-col-4  space-x-4 justify-center items-center w-full h-96 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-50  to-amber-200 '>
+            <div className='flex flex-col-4  space-x-4 justify-center items-center w-screen h-96 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-50  to-amber-200 '>
                 {devOps.map((item, index) => {
 
                     return (
@@ -228,7 +225,7 @@ export default function Body() {
                                 />
                             </div>
                             <div className='grid '>
-
+                                <p>{item.shorthead}</p>
                                 <h1 className=' text-5xl font-bold '>{item.Heading}</h1>
                                 <p>{item.Description}</p>
                                 <div>
@@ -238,12 +235,6 @@ export default function Body() {
                                 </div>
 
                             </div>
-                            {/* <CardContent>
-                                    {item.cardcontent}
-                                </CardContent>
-                                <CardFooter className='justify-center items-center'>
-                                    <p>{item.Footer}</p>
-                                </CardFooter> */}
 
                         </div>
                     )
@@ -255,74 +246,13 @@ export default function Body() {
 
             {/* Start Sixth Section  */}
 
-            <div>
-                {SubHeading.map((item, index) => {
-                    return (
-
-                        <div key={index} >
-                            <h1 >{item.Heading2}</h1>
-                        </div>
-                    )
-                })}
-            </div>
-            <div className='flex flex-col-4  space-x-4 justify-center items-center bg-red-950 w-full'>
-                {FeaturTechnology.map((item, index) => {
-
-                    return (
-                        <Carousel key={index}>
-                            <CarouselContent>
-                                <div>
-                                    <Card className='md:basis-1/2 lg:basis-1/3'>
-                                        <div className=' w-80'>
-                                            <Image
-                                                src={Tree}
-                                                alt="Picture of the author"
-                                                layout="responsive"
-
-                                                width={1200}
-                                                height={600}
-                                            />
-                                        </div>
-                                        <CardContent>
-                                            {item.cardcontent}
-                                        </CardContent>
-                                        <CardFooter className='justify-center items-center'>
-                                            <p>{item.Footer}</p>
-                                        </CardFooter>
-                                    </Card>
-                                </div>
-                            </CarouselContent>
-                        </Carousel>
-                    )
-                })}
-
-            </div>
-
-
-
-
-            {/* End Sixth Section  */}
-
-
-            {/* Start Saventh Section  */}
-
-            <div>
-                <h1>this is the seventh section</h1>
-            </div>
-
-
-
-
-            {/* End Seventh Section  */}
-
-
-            <div className="flex justify-center">
+            <div className="flex justify-center ">
                 <Carousel className="flex justify-center h-auto w-full   p-4" opts={{ align: 'center' }}>
                     <CarouselContent className='flex flex-col-4'>
                         {List.map((item, index) => {
                             return (
                                 <CarouselItem key={index} className="h-auto md:basis-1/2 lg:basis-1/3">
-                                    <div className="rounded overflow-hidden w-full flex justify-center">
+                                    <div className="rounded overflow-hidden w-full flex justify-center ">
                                         <div className="px-6 py-4 max-w-sm p-4">
                                             <div className=" text-xl mb-2 flex flex-col-4 p-4">
                                                 <Card key={index}>
@@ -355,11 +285,7 @@ export default function Body() {
                                                     </CardFooter>
                                                 </Card>
                                             </div>
-                                            {/* <p className="text-gray-700 text-base">
-                                                I am a software developer
-                                                working on the NPI Project at
-                                                Keen and Able Computer Pvt. Ltd.
-                                            </p> */}
+
                                         </div>
 
                                     </div>
@@ -371,6 +297,58 @@ export default function Body() {
                     <CarouselNext />
                 </Carousel>
             </div>
+
+            {/* End Sixth Section  */}
+
+
+            {/* Start Saventh Section  */}
+
+            <div className="flex justify-center">
+                <Carousel className="flex justify-center h-auto w-full   p-4" opts={{ align: 'center' }}>
+                    <CarouselContent className='flex flex-col-4'>
+                        {companylogo.map((item, index) => {
+                            return (
+                                <CarouselItem key={index} className="h-auto md:basis-1/2 lg:basis-1/5">
+                                    <div className="rounded overflow-hidden w-full flex justify-center">
+                                        <div className="px-6 py-4 max-w-sm p-4">
+                                            <div className=" text-xl mb-2 flex flex-col-4 p-4">
+                                                <Card key={index}>
+                                                    <div className=" w-60 object-cover p-4 ">
+                                                        <Link href="">
+                                                        <Image
+                                                            src={item.image}
+                                                            alt="This is logo"
+                                                            width={1200}
+                                                            height={200}
+                                                            className=' object-cover rounded bg-cyan-800 h-28'
+
+                                                        /></Link>
+                                                    </div>
+
+                                                </Card>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </CarouselItem>
+                            );
+                        })}
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                </Carousel>
+            </div>
+            {/* End Seventh Section  */}
+
+            {/* start eight section  */}
+
+
+
+            {/* end eight section  */}
+
         </div>
+
+        // end eight section for complany logos 
     );
 }

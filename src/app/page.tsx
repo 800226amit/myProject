@@ -3,8 +3,11 @@ import Body from "@/components/ui/body";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-red-100 items-center justify-between ">
-      <Body />
+    <main className="flex min-h-screen flex-col bg-blue-100 items-center justify-between ">
+      <div className=" m-4">
+        <Body />
+      </div>
+      
     </main>
   );
 }

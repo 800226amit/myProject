@@ -2,6 +2,10 @@ import React from 'react'
 
 export default function page() {
   return (
-    <div>this is about page</div>
+    <div>
+      <div>
+        <h1>Page Under construction</h1>
+      </div>
+    </div>
   )
 }

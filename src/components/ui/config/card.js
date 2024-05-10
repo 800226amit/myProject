@@ -29,7 +29,7 @@ module.exports = {
         },
         {
             title: "this is title ",
-            name : "Jyoti Kumari",
+            name : "Raj Gautam",
             img : "/images/amit.png",
             description : " I am a software developer working on the NPI Project at Keen and Able Computer Pvt. Ltd."
         }
@@ -114,7 +114,26 @@ module.exports = {
         {
             image: "/logo/devops-removebg-preview.png",
             Heading: "DEV OPS",
+            shorthead: "A glossary of DevOps terms",
             Description: "Case studies of how your DevOps tools or services have helped businesses improve their software delivery process"
+        }
+    ],
+
+    companylogo: [
+        {
+            image: "/logo/academor-removebg-preview.png"
+        },
+        {
+            image: "/logo/pnk 2.png"
+        },
+        {
+            image: "/logo/keen-removebg-preview.png"
+        },
+        {
+            image: "/logo/epicmindsit_logo-removebg-preview.png"
+        },
+        {
+            image: "/logo/Technok.png"
         }
     ]
 }
