@@ -76,16 +76,16 @@ export default function Body() {
                                                 <Card key={index} className='bg-blue-100'>
                                                     <div className=" w-80 object-cover p-4">
                                                         <Link href={item.projectsample}>
-                                                        <Image
-                                                            src={item.projectimage}
-                                                            alt='project image'
-                                                            width={1200}
-                                                            height={800}
-                                                            className=' object-cover rounded bg-cyan-800 h-80 w-80 '
+                                                            <Image
+                                                                src={item.projectimage}
+                                                                alt='project image'
+                                                                width={1200}
+                                                                height={800}
+                                                                className=' object-cover rounded bg-cyan-800 h-80 w-80 '
 
-                                                        />
+                                                            />
                                                         </Link>
-                                                    </div>  
+                                                    </div>
                                                 </Card>
                                             </div>
                                         </div>
@@ -112,33 +112,44 @@ export default function Body() {
                 })}
 
             </div>
-            <div className='flex flex-col-4  space-x-4 justify-center items-center py-24'>
-                {FeaturTechnology.map((item, index) => {
 
-                    return (
-                        <div key={index}>
-                            <Card className="w-[350px]">
-                                <div className=' w-72' key={index}>
 
-                                    <Link href={item.projectsample} ><Image
-                                        src={item.image}
-                                        alt="Picture of the author"
-                                        className='w-80 rounded-xl h-80 object-cover'
-                                        width={1200}
-                                        height={600}
-                                    /></Link>
-                                </div>
-                                <CardContent>
-                                    {item.cardcontent}
-                                </CardContent>
-                                <CardFooter className='justify-center items-center font-bold'>
-                                    <p>{item.Footer}</p>
-                                </CardFooter>
-                            </Card>
-                        </div>
-                    )
-                })}
+            <div className="flex justify-center">
+                <Carousel className="flex justify-center h-auto w-full   p-4" opts={{ align: 'center' }}>
+                    <CarouselContent className='flex flex-col-4'>
+                        {FeaturTechnology.map((item, index) => {
+                            return (
+                                <CarouselItem key={index} className="h-auto md:basis-1/2 lg:basis-1/3">
+                                    <div className="rounded overflow-hidden w-full flex justify-center">
+                                        <div className="px-6 py-4 max-w-sm p-4">
+                                            <div className=" text-xl mb-2 flex flex-col-4 p-4">
+                                                <Card key={index}>
+                                                    <div className=" w-80 object-cover p-4">
+                                                        <Link href={item.projectsample} ><Image
+                                                            src={item.image}
+                                                            alt="Picture of the author"
+                                                            className='w-80 rounded-xl h-80 object-cover'
+                                                            width={1200}
+                                                            height={600}
+                                                        /></Link>
+                                                    </div>
+                                                    <CardContent>
+                                                        <h1 className='flex justify-center font-bold'>{item.Footer} </h1>
+                                                    </CardContent>
+                                                    
+                                                </Card>
+                                            </div>
 
+                                        </div>
+
+                                    </div>
+                                </CarouselItem>
+                            );
+                        })}
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                </Carousel>
             </div>
             {/* End Third Section Feature Technology */}
 
@@ -156,35 +167,45 @@ export default function Body() {
                     )
                 })}
             </div>
-            <div className='flex flex-col-4  space-x-4 justify-center items-center'>
-                {LatestTechnology.map((item, index) => {
+          
+            <div className="flex justify-center">
+                <Carousel className="flex justify-center h-auto w-full   p-4" opts={{ align: 'center' }}>
+                    <CarouselContent className='flex flex-col-4'>
+                        {LatestTechnology.map((item, index) => {
+                            return (
+                                <CarouselItem key={index} className="h-auto md:basis-1/2 lg:basis-1/3">
+                                    <div className="rounded overflow-hidden w-full flex justify-center">
+                                        <div className="px-6 py-4 max-w-sm p-4">
+                                            <div className=" text-xl mb-2 flex flex-col-4 p-4">
+                                                <Card key={index}>
+                                                    <div className=" w-80 object-cover p-4 ">
+                                                        <Link href={item.projectsample} ><Image
+                                                            src={item.image}
+                                                            alt="Picture of the author"
+                                                            className='w-80 rounded-xl h-80 object-cover'
+                                                            width={1200}
+                                                            height={600}
+                                                        /></Link>
+                                                    </div>
+                                                    <CardContent>
+                                                        <h1 className='flex justify-center font-bold'>{item.Footer} </h1>
+                                                    </CardContent>
+                                                    
+                                                </Card>
+                                            </div>
 
-                    return (
-                        <div key={index}>
-                            <Card className="w-[350px]">
-                                <div className=' w-72 bg-black rounded-xl'>
-                                    <Link href={item.projectsample}>
-                                        <Image
-                                            src={item.image}
-                                            alt="Picture of the author"
-                                            className='w-80 rounded-xl h-80'
-                                            width={1200}
-                                            height={600}
-                                        />
-                                    </Link>
-                                </div>
-                                <CardContent>
-                                    {item.cardcontent}
-                                </CardContent>
-                                <CardFooter className='justify-center items-center font-bold'>
-                                    <p>{item.Footer}</p>
-                                </CardFooter>
-                            </Card>
-                        </div>
-                    )
-                })}
+                                        </div>
 
+                                    </div>
+                                </CarouselItem>
+                            );
+                        })}
+                    </CarouselContent>
+                    
+                </Carousel>
             </div>
+
+          
             {/* End Fourth Section Latest Technology */}
 
             {/* Start Fifth Section dev opes  */}
@@ -257,7 +278,7 @@ export default function Body() {
                                                 src={Tree}
                                                 alt="Picture of the author"
                                                 layout="responsive"
-                                                
+
                                                 width={1200}
                                                 height={600}
                                             />

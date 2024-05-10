@@ -2,6 +2,7 @@
 
 const { Heading } = require("lucide-react");
 const { List } = require("postcss");    
+const { title } = require("process");
 
 module.exports = {
 
@@ -69,6 +70,7 @@ module.exports = {
 
     FeaturTechnology: [
         {
+            
             image : "/Featuretechnology/Ai.webp",
             Footer : "Artificial intelligence",
             cardcontent : "",
