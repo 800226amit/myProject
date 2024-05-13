@@ -43,30 +43,32 @@ export default function Body() {
         <div className='flex flex-col justify-center items-center min-h-screen bg-blue-100 w-full space-y-16'>
 
             {/* Start First Section  */}
-            
-            <div className="relative w-full max-w-screen-xl h-[100vh]">
-            <div className="w-[1250px]">
-                <div className='relative border-8 border-slate-800 border-solid rounded-lg shadow-2xl'>
-                <AspectRatio ratio={16 / 9}>
-                    <Image
-                        src={images[activeImageIndex]}
-                        alt="Picture of the author"
-                        layout="responsive"
-                        width={1200}
-                        height={600}
-                    // className='rounded-lg'
-                    />
-                    <Link href="https://github.com/amitkeen/Keycloak/blob/65d7ee7ca77ad3aa6c944eaf9c5d30aef3747b25/keycloak/README.md" target='_blank' className='absolute bottom-5 left-5 bg-lime-50 px-4 py-2 rounded-lg transition duration-700 ease-in-out hover:bg-lime-300'>
-                        Explore Here
-                    </Link>
-                    <div className='absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white'>
-                        <h1 className='text-4xl md:text-6xl lg:text-7xl  font-bold'>{desbordtitle}</h1>
-                        <p className='mt-4 text-lg md:text-xl lg:text-lg text-gray-300'>{deshbordDescript}</p>
+
+            <div className="relative w-full max-w-screen-xl h-[100vh] flex justify-center items-center">
+                <div className="w-full sm:max-w-[430px] md:max-w-[680px] lg:max-w-[1250px]">
+                    <div className='relative border-8 border-slate-800 border-solid rounded-lg shadow-2xl'>
+                        <AspectRatio ratio={16 / 9}>
+                            <Image
+                                src={images[activeImageIndex]}
+                                alt="Picture of the author"
+                                layout="responsive"
+                                width={1200}
+                                height={600}
+                                className='w-full h-full object-cover'
+                            />
+                            <Link href="https://github.com/amitkeen/Keycloak/blob/65d7ee7ca77ad3aa6c944eaf9c5d30aef3747b25/keycloak/README.md" target='_blank' 
+                            className='absolute bottom-5 left-5 bg-lime-50 px-4 py-2 rounded-lg transition duration-700 ease-in-out hover:bg-lime-300'>
+                                Explore Here
+                            </Link>
+                            <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white w-full px-5'>
+                                <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold'>{desbordtitle}</h1>
+                                <p className='mt-4 text-lg md:text-xl lg:text-lg text-gray-300'>{deshbordDescript}</p>
+                            </div>
+                        </AspectRatio>
                     </div>
-                    </AspectRatio>
-                </div>
                 </div>
             </div>
+
 
             {/* End First Section  */}
 
@@ -78,11 +80,11 @@ export default function Body() {
                         {myIframe.map((item, index) => {
                             return (
                                 <CarouselItem key={index} className="h-auto md:basis-1/2 lg:basis-1/4">
-                                    <div className="rounded overflow-hidden w-full flex justify-center">
-                                        <div className="px-6 py-4 max-w-sm p-4">
-                                            <div className=" text-xl mb-2 flex flex-col-4 p-4">
-                                                <Card key={index} className='bg-blue-100'>
-                                                    <div className=" w-80 object-cover p-4">
+                                    <div className="rounded overflow-hidden w-full flex justify-center / container px-5 py-24 mx-auto">
+                                        <div className="px-6 py-4 max-w-sm p-4 / -m-4">
+                                            <div className=" text-xl mb-2 flex flex-col-4">
+                                                <Card key={index} className='bg-blue-100 xl:w-1/4 md:w-1/2 p-4'>
+                                                    <div className=" w-80 object-cover p-4 ">
                                                         <Link href={item.projectsample}>
                                                             <Image
                                                                 src={item.projectimage}
@@ -104,6 +106,37 @@ export default function Body() {
                     </CarouselContent>
                 </Carousel>
             </div>
+
+
+            {/* <div className="flex justify-center">
+                <Carousel className="flex justify-center h-auto w-full   p-4" opts={{ align: 'center' }}>
+                    <CarouselContent className='flex flex-col-4'>
+                        {myIframe.map((item, index) => {
+                            return (
+                                <CarouselItem key={index} className="h-auto sm:basis-1/2 md:basis-1/3 lg:basis-1/4 w-80">
+                                   
+                                                <Card key={index} className='bg-blue-100 xl:w-1/4 md:w-1/2 p-4 w-80'>
+                                                    <div className=" w-80 object-cover p-4 ">
+                                                        <Link href={item.projectsample}>
+                                                            <Image
+                                                                src={item.projectimage}
+                                                                alt='project image'
+                                                                width={1200}
+                                                                height={800}
+                                                                className=' object-cover rounded bg-cyan-800 h-80 w-80 '
+
+                                                            />
+                                                        </Link>
+                                                    </div>
+                                                </Card>
+                                            
+                                </CarouselItem>
+                            );
+                        })}
+                    </CarouselContent>
+                </Carousel>
+            </div> */}
+            
 
             {/* End Second Section  */}
 
@@ -155,7 +188,7 @@ export default function Body() {
                             );
                         })}
                     </CarouselContent>
-                    
+
                 </Carousel>
             </div>
             {/* End Third Section Feature Technology */}
@@ -323,14 +356,14 @@ export default function Body() {
                                                 <Card key={index}>
                                                     <div className=" w-60 object-cover p-4 ">
                                                         <Link href="">
-                                                        <Image
-                                                            src={item.image}
-                                                            alt="This is logo"
-                                                            width={1200}
-                                                            height={200}
-                                                            className=' object-cover rounded bg-cyan-800 h-28'
+                                                            <Image
+                                                                src={item.image}
+                                                                alt="This is logo"
+                                                                width={1200}
+                                                                height={200}
+                                                                className=' object-cover rounded bg-cyan-800 h-28'
 
-                                                        /></Link>
+                                                            /></Link>
                                                     </div>
 
                                                 </Card>

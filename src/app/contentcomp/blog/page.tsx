@@ -25,7 +25,7 @@ export default function page() {
             <MenubarSeparator />
             <MenubarItem>Share</MenubarItem>
             <MenubarSeparator />
-            <MenubarItem><Link href="/contentcomp/Allsubfile/httperror">Print</Link></MenubarItem>
+            <MenubarItem><Link href="/contentcomp/Allsubfile/httperror">HTTP Errors</Link></MenubarItem>
           </MenubarContent>
         </MenubarMenu>
       </Menubar>
