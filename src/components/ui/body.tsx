@@ -10,6 +10,9 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, } from "@/components/ui/card"
 import { title } from 'process';
 
+import { AspectRatio } from "@/components/ui/aspect-ratio"
+
+
 import { List, SubHeading, companylogo, myIframe, FeaturTechnology, LatestTechnology, devOps } from "./config/card.js";
 
 
@@ -40,8 +43,11 @@ export default function Body() {
         <div className='flex flex-col justify-center items-center min-h-screen bg-blue-100 w-full space-y-16'>
 
             {/* Start First Section  */}
+            
             <div className="relative w-full max-w-screen-xl h-[100vh]">
+            <div className="w-[1250px]">
                 <div className='relative border-8 border-slate-800 border-solid rounded-lg shadow-2xl'>
+                <AspectRatio ratio={16 / 9}>
                     <Image
                         src={images[activeImageIndex]}
                         alt="Picture of the author"
@@ -57,6 +63,8 @@ export default function Body() {
                         <h1 className='text-4xl md:text-6xl lg:text-7xl  font-bold'>{desbordtitle}</h1>
                         <p className='mt-4 text-lg md:text-xl lg:text-lg text-gray-300'>{deshbordDescript}</p>
                     </div>
+                    </AspectRatio>
+                </div>
                 </div>
             </div>
 
