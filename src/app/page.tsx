@@ -3,7 +3,7 @@ import Body from "@/components/ui/body";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-blue-100 items-center justify-between  w-screen">
+    <main className="flex min-h-screen flex-col bg-blue-100 items-center justify-between  ">
       
         <Body />
      

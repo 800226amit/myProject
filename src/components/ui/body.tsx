@@ -40,7 +40,7 @@ export default function Body() {
 
 
     return (
-        <div className='flex flex-col justify-center items-center min-h-screen bg-blue-100 w-full space-y-16'>
+        <div className='flex flex-col  items-center  bg-blue-100 w-full  '>
 
             {/* Start First Section  */}
 
@@ -74,38 +74,7 @@ export default function Body() {
 
 
             {/* Start Second Section  */}
-            {/* <div className="flex justify-center">
-                <Carousel className="flex justify-center h-auto w-full items-end   " opts={{ align: 'center' }}>
-                    <CarouselContent className='flex flex-col-4 items-center grow'>
-                        {myIframe.map((item, index) => {
-                            return (
-                                <CarouselItem key={index} className="h-auto lg:basis-1/4 md:basis-1/3 sm:basis-1/1   cursor-pointer">
-                                    <div className="rounded overflow-hidden w-full flex justify-center / container px-5 py-24 mx-auto">
-                                        <div className="px-6 py-4 max-w-sm  / -m-4">
-                                            <div className=" text-xl mb-2 flex flex-col-4">
-                                                <Card key={index} className='bg-blue-100 xl:w-1/4 md:w-1/2 '>
-                                                    <div className=" w-80 object-cover rounded-lg overflow-hidden h-max-[200px]">
-                                                        <Link href={item.projectsample}>
-                                                            <Image
-                                                                src={item.projectimage}
-                                                                alt='project image'
-                                                                width={1200}
-                                                                height={800}
-                                                                className=' object-cover rounded bg-cyan-800 h-80 w-80 '
 
-                                                            />
-                                                        </Link>
-                                                    </div>
-                                                </Card>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </CarouselItem>
-                            );
-                        })}
-                    </CarouselContent>
-                </Carousel>
-            </div> */}
 
             <div className="flex justify-center">
                 <Carousel className=" m-3 justify-center flex" >
@@ -133,66 +102,55 @@ export default function Body() {
 
             </div>
 
-
-
             {/* End Second Section  */}
-
-
 
             {/* Start Thired Section  Featured Technology  */}
             <div>
                 {SubHeading.map((item, index) => {
                     return (
                         <div key={index}>
-                            <h1 className='text-3xl font-bold font-sans'>{item.Heading}</h1>
+                            <div >
+                                <h1 className='text-3xl font-bold font-sans'>{item.Heading}</h1>
+                            </div>
                         </div>
                     );
                 })}
 
             </div>
 
-
             <div className="flex justify-center">
-                <Carousel className="flex justify-center h-auto w-full   p-4" opts={{ align: 'center' }}>
-                    <CarouselContent className='flex flex-col-4'>
+                <Carousel className=" m-3 justify-center flex" >
+                    <CarouselContent className="-ml-2 md:-ml-4 " >
                         {FeaturTechnology.map((item, index) => {
                             return (
-                                <CarouselItem key={index} className="h-auto md:basis-1/2 lg:basis-1/3">
-                                    <div className="rounded overflow-hidden w-full flex justify-center">
-                                        <div className="px-6 py-4 max-w-sm p-4">
-                                            <div className=" text-xl mb-2 flex flex-col-4 p-4">
-                                                <Card key={index}>
-                                                    <div className=" w-80 object-cover p-4">
-                                                        <Link href={item.projectsample} ><Image
-                                                            src={item.image}
-                                                            alt="Picture of the author"
-                                                            className='w-80 rounded-xl h-80 object-cover'
-                                                            width={1200}
-                                                            height={600}
-                                                        /></Link>
-                                                    </div>
-                                                    <CardContent>
-                                                        <h1 className='flex justify-center font-bold'>{item.Footer} </h1>
-                                                    </CardContent>
-
-                                                </Card>
-                                            </div>
-
+                                <CarouselItem key={index} className="pl-2 md:pl-4 xl:basis-1/3 lg:basis-1/3 md:basis-1/2 sm:basis-1/1 flex justify-center">
+                                    <Card key={index}>
+                                        <div className=" w-80 object-cover p-4">
+                                            <Link href={item.projectsample} ><Image
+                                                src={item.image}
+                                                alt="Picture of the author"
+                                                className='w-80 rounded-xl h-80 object-cover'
+                                                width={1200}
+                                                height={600}
+                                            /></Link>
                                         </div>
+                                        <CardContent>
+                                            <h1 className='flex justify-center font-bold'>{item.Footer} </h1>
+                                        </CardContent>
 
-                                    </div>
+                                    </Card>
                                 </CarouselItem>
-                            );
-                        })}
+
+                            )
+                        }
+                        )}
                     </CarouselContent>
-
                 </Carousel>
+
             </div>
+
+
             {/* End Third Section Feature Technology */}
-
-
-
-
 
             {/* Start fourth Section Latest Technology */}
             <div>
@@ -206,38 +164,34 @@ export default function Body() {
             </div>
 
             <div className="flex justify-center">
-                <Carousel className="flex justify-center h-auto w-full   p-4" opts={{ align: 'center' }}>
-                    <CarouselContent className='flex flex-col-4'>
+                <Carousel className=" m-3 justify-center flex" >
+                    <CarouselContent className="-ml-2 md:-ml-4 " >
                         {LatestTechnology.map((item, index) => {
                             return (
-                                <CarouselItem key={index} className="h-auto md:basis-1/2 lg:basis-1/3">
-                                    <div className="rounded overflow-hidden w-full flex justify-center">
-                                        <div className="px-6 py-4 max-w-sm p-4">
-                                            <div className=" text-xl mb-2 flex flex-col-4 p-4">
-                                                <Card key={index}>
-                                                    <div className=" w-80 object-cover p-4 ">
-                                                        <Link href={item.projectsample} ><Image
-                                                            src={item.image}
-                                                            alt="Picture of the author"
-                                                            className='w-80 rounded-xl h-80 object-cover'
-                                                            width={1200}
-                                                            height={600}
-                                                        /></Link>
-                                                    </div>
-                                                    <CardContent>
-                                                        <h1 className='flex justify-center font-bold'>{item.Footer} </h1>
-                                                    </CardContent>
-
-                                                </Card>
-                                            </div>
-
+                                <CarouselItem key={index} className="pl-2 md:pl-4 xl:basis-1/3 lg:basis-1/3 md:basis-1/2 sm:basis-1/1 flex justify-center">
+                                    <Card key={index}>
+                                        <div className=" w-80 object-cover p-4">
+                                            <Link href={item.projectsample} ><Image
+                                                src={item.image}
+                                                alt="Picture of the author"
+                                                className='w-80 rounded-xl h-80 object-cover'
+                                                width={1200}
+                                                height={600}
+                                            /></Link>
                                         </div>
-                                    </div>
+                                        <CardContent>
+                                            <h1 className='flex justify-center font-bold'>{item.Footer} </h1>
+                                        </CardContent>
+
+                                    </Card>
                                 </CarouselItem>
-                            );
-                        })}
+
+                            )
+                        }
+                        )}
                     </CarouselContent>
                 </Carousel>
+
             </div>
 
 
@@ -246,7 +200,7 @@ export default function Body() {
             {/* Start Fifth Section dev opes  */}
 
 
-            <div className='flex flex-col-4  space-x-4 justify-center items-center w-screen h-96 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-50  to-amber-200 '>
+            <div className='flex flex-col-4  space-x-4 justify-center items-center w-full h-96 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-50  to-amber-200 '>
                 {devOps.map((item, index) => {
 
                     return (
@@ -284,56 +238,51 @@ export default function Body() {
 
             {/* Start Sixth Section  */}
 
-            <div className="flex justify-center ">
-                <Carousel className="flex justify-center h-auto w-full   p-4" opts={{ align: 'center' }}>
-                    <CarouselContent className='flex flex-col-4'>
+            <div className="flex justify-center">
+                <Carousel className=" m-3 justify-center flex" >
+                    <CarouselContent className="-ml-2 md:-ml-4 " >
                         {List.map((item, index) => {
                             return (
-                                <CarouselItem key={index} className="h-auto md:basis-1/2 lg:basis-1/3">
-                                    <div className="rounded overflow-hidden w-full flex justify-center ">
-                                        <div className="px-6 py-4 max-w-sm p-4">
-                                            <div className=" text-xl mb-2 flex flex-col-4 p-4">
-                                                <Card key={index}>
-                                                    <div className=" w-80 object-cover p-4">
-                                                        <Image
-                                                            src={item.img}
-                                                            alt={item.title}
-                                                            width={1200}
-                                                            height={600}
-                                                            className=' object-cover rounded bg-cyan-800'
+                                <CarouselItem key={index} className="pl-2 md:pl-4 xl:basis-1/3 lg:basis-1/3 md:basis-1/2 sm:basis-1/1 flex justify-center">
+                                    <Card key={index} className=' w-72'>
+                                        <div className=" object-cover p-4">
+                                            <Image
+                                                src={item.img}
+                                                alt={item.title}
+                                                width={1200}
+                                                height={600}
+                                                className=' object-cover rounded bg-cyan-800'
 
-                                                        />
-                                                    </div>
-                                                    <CardContent>
-                                                        <h1 className='flex justify-center font-bold'>{item.name} </h1>
-                                                        <p>
-                                                            {item.description}
-                                                        </p>
-                                                    </CardContent>
-                                                    <CardFooter className="flex justify-center">
-                                                        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                                                            Next js.
-                                                        </span>
-                                                        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                                                            Java
-                                                        </span>
-                                                        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                                                            Figma
-                                                        </span>
-                                                    </CardFooter>
-                                                </Card>
-                                            </div>
-
+                                            />
                                         </div>
-
-                                    </div>
+                                        <CardContent>
+                                            <h1 className='flex justify-center font-bold'>{item.name} </h1>
+                                            <p>
+                                                {item.description}
+                                            </p>
+                                        </CardContent>
+                                        <CardFooter className="flex justify-center">
+                                            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                                                Next js.
+                                            </span>
+                                            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                                                Java
+                                            </span>
+                                            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                                                Figma
+                                            </span>
+                                        </CardFooter>
+                                    </Card>
                                 </CarouselItem>
-                            );
-                        })}
+                            )
+                        }
+                        )}
                     </CarouselContent>
+
                     <CarouselPrevious />
                     <CarouselNext />
                 </Carousel>
+
             </div>
 
             {/* End Sixth Section  */}
@@ -342,40 +291,33 @@ export default function Body() {
             {/* Start Saventh Section  */}
 
             <div className="flex justify-center">
-                <Carousel className="flex justify-center h-auto w-full   p-4" opts={{ align: 'center' }}>
-                    <CarouselContent className='flex flex-col-4'>
+                <Carousel className=" m-3 justify-center flex" >
+                    <CarouselContent className="-ml-2 md:-ml-4 " >
                         {companylogo.map((item, index) => {
                             return (
-                                <CarouselItem key={index} className="h-auto md:basis-1/2 lg:basis-1/5">
-                                    <div className="rounded overflow-hidden w-full flex justify-center">
-                                        <div className="px-6 py-4 max-w-sm p-4">
-                                            <div className=" text-xl mb-2 flex flex-col-4 p-4">
-                                                <Card key={index}>
-                                                    <div className=" w-60 object-cover p-4 ">
-                                                        <Link href="">
-                                                            <Image
-                                                                src={item.image}
-                                                                alt="This is logo"
-                                                                width={1200}
-                                                                height={200}
-                                                                className=' object-cover rounded bg-cyan-800 h-28'
-
-                                                            /></Link>
-                                                    </div>
-
-                                                </Card>
-                                            </div>
-
+                                <CarouselItem key={index} className="pl-2 md:pl-4 xl:basis-1/5 lg:basis-1/3 md:basis-1/2 sm:basis-1/1 flex justify-center">
+                                    <Link href="">
+                                        <div className=' h-28'>
+                                            <Image
+                                                src={item.image}
+                                                alt='project image'
+                                                width={1200}
+                                                height={800}
+                                                className=' object-cover rounded bg-cyan-800 h-24 w-80 '
+                                            />
                                         </div>
+                                    </Link>
 
-                                    </div>
                                 </CarouselItem>
-                            );
-                        })}
+
+                            )
+                        }
+                        )}
                     </CarouselContent>
                     <CarouselPrevious />
                     <CarouselNext />
                 </Carousel>
+
             </div>
             {/* End Seventh Section  */}
 

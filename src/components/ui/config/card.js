@@ -20,7 +20,7 @@ module.exports = {
         {
             title: "this is title second",
             name : "Ritesh Kumar Panday",
-            img : "/images/amitwibg.jpeg",
+            img : "/images/ritesh.png",
             description : " I am a software developer working on the NPI Project at Keen and Able Computer Pvt. Ltd."
         },
         {
