@@ -12,6 +12,8 @@ module.exports = {
             title: "this is first title",
             name: "Amit Kumar",
             img : "/images/amit.png",
+            urls: "www.google.com",
+            imageUrl: "/images/amit.png",
             description : " I am a software developer working on the NPI Project at Keen and Able Computer Pvt. Ltd."
         },
         

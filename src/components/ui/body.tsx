@@ -56,8 +56,8 @@ export default function Body() {
                                 height={600}
                                 className='w-full h-full object-cover'
                             />
-                            <Link href="https://github.com/amitkeen/Keycloak/blob/65d7ee7ca77ad3aa6c944eaf9c5d30aef3747b25/keycloak/README.md" target='_blank' 
-                            className='absolute bottom-5 left-5 bg-lime-50 px-4 py-2 rounded-lg transition duration-700 ease-in-out hover:bg-lime-300'>
+                            <Link href="https://github.com/amitkeen/Keycloak/blob/65d7ee7ca77ad3aa6c944eaf9c5d30aef3747b25/keycloak/README.md" target='_blank'
+                                className='absolute bottom-5 left-5 bg-lime-50 px-4 py-2 rounded-lg transition duration-700 ease-in-out hover:bg-lime-300'>
                                 Explore Here
                             </Link>
                             <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white w-full px-5'>
@@ -74,17 +74,17 @@ export default function Body() {
 
 
             {/* Start Second Section  */}
-            <div className="flex justify-center">
-                <Carousel className="flex justify-center h-auto w-full   p-4" opts={{ align: 'center' }}>
-                    <CarouselContent className='flex flex-col-4'>
+            {/* <div className="flex justify-center">
+                <Carousel className="flex justify-center h-auto w-full items-end   " opts={{ align: 'center' }}>
+                    <CarouselContent className='flex flex-col-4 items-center grow'>
                         {myIframe.map((item, index) => {
                             return (
-                                <CarouselItem key={index} className="h-auto md:basis-1/2 lg:basis-1/4">
+                                <CarouselItem key={index} className="h-auto lg:basis-1/4 md:basis-1/3 sm:basis-1/1   cursor-pointer">
                                     <div className="rounded overflow-hidden w-full flex justify-center / container px-5 py-24 mx-auto">
-                                        <div className="px-6 py-4 max-w-sm p-4 / -m-4">
+                                        <div className="px-6 py-4 max-w-sm  / -m-4">
                                             <div className=" text-xl mb-2 flex flex-col-4">
-                                                <Card key={index} className='bg-blue-100 xl:w-1/4 md:w-1/2 p-4'>
-                                                    <div className=" w-80 object-cover p-4 ">
+                                                <Card key={index} className='bg-blue-100 xl:w-1/4 md:w-1/2 '>
+                                                    <div className=" w-80 object-cover rounded-lg overflow-hidden h-max-[200px]">
                                                         <Link href={item.projectsample}>
                                                             <Image
                                                                 src={item.projectimage}
@@ -105,38 +105,35 @@ export default function Body() {
                         })}
                     </CarouselContent>
                 </Carousel>
+            </div> */}
+
+            <div className="flex justify-center">
+                <Carousel className=" m-3 justify-center flex" >
+                    <CarouselContent className="-ml-2 md:-ml-4 " >
+                        {myIframe.map((item, index) => {
+                            return (
+                                <CarouselItem className="pl-2 md:pl-4 xl:basis-1/4 lg:basis-1/3 md:basis-1/2 sm:basis-1/1 flex justify-center">
+                                    <Link href={item.projectsample}>
+                                        <Image
+                                            src={item.projectimage}
+                                            alt='project image'
+                                            width={1200}
+                                            height={800}
+                                            className=' object-cover rounded bg-cyan-800 h-80 w-80 '
+
+                                        />
+                                    </Link>
+                                </CarouselItem>
+
+                            )
+                        }
+                        )}
+                    </CarouselContent>
+                </Carousel>
+
             </div>
 
 
-            {/* <div className="flex justify-center">
-                <Carousel className="flex justify-center h-auto w-full   p-4" opts={{ align: 'center' }}>
-                    <CarouselContent className='flex flex-col-4'>
-                        {myIframe.map((item, index) => {
-                            return (
-                                <CarouselItem key={index} className="h-auto sm:basis-1/2 md:basis-1/3 lg:basis-1/4 w-80">
-                                   
-                                                <Card key={index} className='bg-blue-100 xl:w-1/4 md:w-1/2 p-4 w-80'>
-                                                    <div className=" w-80 object-cover p-4 ">
-                                                        <Link href={item.projectsample}>
-                                                            <Image
-                                                                src={item.projectimage}
-                                                                alt='project image'
-                                                                width={1200}
-                                                                height={800}
-                                                                className=' object-cover rounded bg-cyan-800 h-80 w-80 '
-
-                                                            />
-                                                        </Link>
-                                                    </div>
-                                                </Card>
-                                            
-                                </CarouselItem>
-                            );
-                        })}
-                    </CarouselContent>
-                </Carousel>
-            </div> */}
-            
 
             {/* End Second Section  */}
 
